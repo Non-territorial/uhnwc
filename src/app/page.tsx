@@ -1,29 +1,31 @@
 "use client";
+import Link from "next/link";
+import MuxPlayer from '@mux/mux-player-react';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white font-ibm-plex-mono relative">
       {/* Video Section */}
       <section className="h-[74vh] w-full relative">
-        <video
-          className="w-full h-full object-cover"
-          loop
-          autoPlay
-          muted
-          playsInline
-        >
-          <source src="/background-video.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+      <MuxPlayer
+        playbackId="4xUkKW2ink59xJhMl01ojOyqPmVSInth6W8ifSkCgsGA" // Replace with your Mux Playback ID
+        className="w-full h-full object-cover"
+        loop
+        autoPlay
+        muted
+        playsInline
+        streamType="on-demand" // Use "live" if it’s a live stream
+      />
+       
         {/* Optional Overlay */}
         <div className="absolute top-0 left-0 w-full h-full bg-black/30"></div>
 
         {/* Titles Column */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col space-y-3 text-center">
-          <a href="#" className="text-2xl text-gray-300 hover:text-white transition">TITLES</a>
-          <a href="#" className="text-2xl text-gray-300 hover:text-white transition">CLIMATE EXCHANGE</a>
-          <a href="#" className="text-2xl text-gray-300 hover:text-white transition">BAI UEIT</a>
-          <a href="#" className="text-2xl text-gray-300 hover:text-white transition">CURATORS GLASSES</a>
+          <Link href="#" className="text-2xl text-gray-300 hover:text-white transition">TITLES</Link>
+          <Link href="#" className="text-2xl text-gray-300 hover:text-white transition">CLIMATE EXCHANGE</Link>
+          <Link href="#" className="text-2xl text-gray-300 hover:text-white transition">BAI UEIT</Link>
+          <Link href="#" className="text-2xl text-gray-300 hover:text-white transition">CURATORS GLASSES</Link>
         </div>
       </section>
 
