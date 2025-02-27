@@ -39,7 +39,7 @@ export default function Home() {
             Jean Baudrillard, The Transparency of Evil, 1990
           </p>
           <p className="mt-2">
-            <a href="mailto:i@bravehills.net" className="text-base text-gray-400 hover:text-white">
+            <a href="mailto:uhnwc@protonmail.ch" className="text-base text-gray-400 hover:text-white">
               uhnwc@protonmail.ch
             </a>
           </p>
