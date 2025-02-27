@@ -1,0 +1,49 @@
+"use client";
+
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-black text-white font-ibm-plex-mono relative">
+      {/* Video Section */}
+      <section className="h-[74vh] w-full relative">
+        <video
+          className="w-full h-full object-cover"
+          loop
+          autoPlay
+          muted
+          playsInline
+        >
+          <source src="/background-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        {/* Optional Overlay */}
+        <div className="absolute top-0 left-0 w-full h-full bg-black/30"></div>
+
+        {/* Titles Column */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col space-y-3 text-center">
+          <a href="#" className="text-2xl text-gray-300 hover:text-white transition">TITLES</a>
+          <a href="#" className="text-2xl text-gray-300 hover:text-white transition">CLIMATE EXCHANGE</a>
+          <a href="#" className="text-2xl text-gray-300 hover:text-white transition">BAI UEIT</a>
+          <a href="#" className="text-2xl text-gray-300 hover:text-white transition">CURATORS GLASSES</a>
+        </div>
+      </section>
+
+      {/* Text Content Section */}
+      <main className="h-[26vh] w-full py-2 px-2 text-white leading-relaxed text-left">
+        <div className="max-w-none">
+          <h1 className="text-base text-white mb-2">UHNWC is a Multidisciplinary Studio</h1>
+          <p className="text-base mb-2">UHNWCは学際的なスタジオである</p>
+          <p className="text-base">
+            &quot;And so art is everywhere, since artifice is at the very heart of reality. And so art is dead, not only because its critical transcendence is gone, but because reality itself, entirely impregnated by an aesthetic which is inseparable from its own structure, has been confused with its own image. Reality no longer has the time to take on the appearance of reality. It no longer even surpasses fiction: it captures every dream even before it takes on the appearance of a dream.&quot; <br />
+            Jean Baudrillard, The Transparency of Evil, 1990
+          </p>
+          <p className="mt-2">
+            <a href="mailto:i@bravehills.net" className="text-base text-gray-400 hover:text-white">
+              uhnwc@protonmail.ch
+            </a>
+          </p>
+          <p className="mt-2 text-sm">&copy; 2025 UHNWC. All rights reserved.</p>
+        </div>
+      </main>
+    </div>
+  );
+}
